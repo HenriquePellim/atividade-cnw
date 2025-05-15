@@ -78,15 +78,37 @@
   </style>
 </head>
 <script>
-  function mudarParaVerde() {
-    document.body.style.backgroundColor = '#e8f5e9';
-    document.body.style.color = '#1b5e20';
+  let temaVerdeAtivo = false;
 
-    document.querySelector('header').style.backgroundColor = '#43a047';
-    document.querySelector('footer').style.backgroundColor = '#43a047';
-    document.querySelector('nav').style.backgroundColor = '#2e7d32';
+  function alternarTema() {
+    const body = document.body;
+    const header = document.querySelector('header');
+    const footer = document.querySelector('footer');
+    const nav = document.querySelector('nav');
+    const botao = document.getElementById('botao-tema');
+
+    if (!temaVerdeAtivo) {
+      // Muda para o tema verde
+      body.style.backgroundColor = '#e8f5e9';
+      body.style.color = '#1b5e20';
+      header.style.backgroundColor = '#43a047';
+      footer.style.backgroundColor = '#43a047';
+      nav.style.backgroundColor = '#2e7d32';
+      botao.textContent = 'Trocar para tema azul';
+      temaVerdeAtivo = true;
+    } else {
+      // Volta para o tema azul
+      body.style.backgroundColor = '#f5f5f5';
+      body.style.color = '#333';
+      header.style.backgroundColor = '#1e88e5';
+      footer.style.backgroundColor = '#1e88e5';
+      nav.style.backgroundColor = '#1565c0';
+      botao.textContent = 'Trocar para tema verde';
+      temaVerdeAtivo = false;
+    }
   }
 </script>
+
 
 <body>
   <header>
@@ -107,7 +129,7 @@
   <p>Essa é uma página inicial simples criada com HTML, CSS e JavaScript.</p>
   <img src="images/shrek.jpg" alt="Imagem ilustrativa">
   <br><br>
-  <button onclick="mudarParaVerde()">Aperte aqui!</button>
+  <button id="botao-tema" onclick="alternarTema()">Trocar tema</button>
 </main>
 
 
