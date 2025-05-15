@@ -77,10 +77,21 @@
     }
   </style>
 </head>
+<script>
+  function mudarParaVerde() {
+    document.body.style.backgroundColor = '#e8f5e9';
+    document.body.style.color = '#1b5e20';
+
+    document.querySelector('header').style.backgroundColor = '#43a047';
+    document.querySelector('footer').style.backgroundColor = '#43a047';
+    document.querySelector('nav').style.backgroundColor = '#2e7d32';
+  }
+</script>
+
 <body>
   <header>
     <h1>Bem-vindo à Minha Página</h1>
-    <p>Sua introdução aqui</p>
+    <p>Atividade CNW2 15/05/25</p>
   </header>
 
   <nav>
@@ -91,14 +102,19 @@
   </nav>
 
   <main>
-    <h2>Olá, mundo!</h2>
-    <p>Essa é uma página inicial simples criada com HTML e CSS.</p>
-   <img src="images/shrek.jpg" alt="Imagem ilustrativa">
+   <main>
+  <h2>Olá!</h2>
+  <p>Essa é uma página inicial simples criada com HTML, CSS e JavaScript.</p>
+  <img src="images/shrek.jpg" alt="Imagem ilustrativa">
+  <br><br>
+  <button onclick="mudarParaVerde()">Aperte aqui!</button>
+</main>
+
 
   </main>
 
   <footer>
-    &copy; 2025 - Seu Nome ou Projeto
+    &copy; 2025 - Henrique Pellim
   </footer>
 </body>
 </html>
